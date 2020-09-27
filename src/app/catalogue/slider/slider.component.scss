@@ -1,0 +1,30 @@
+.slider {
+  height: 500px;
+  background-image: url(../../../assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  img {
+    overflow: hidden;
+  }
+
+  h1 {
+    color: #ddd;
+    text-shadow: 0 0 1px #000;
+    margin-left: 50%;
+    position: absolute;
+    font-weight: bold;
+    bottom: 10%;
+  }
+
+  small {
+    position: absolute;
+    bottom: 5%;
+    color: rgb(150, 250, 146);
+    font-size: 18px;
+    font-weight: 100;
+    margin-left: 50%;
+  }
+}
