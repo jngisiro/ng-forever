@@ -1,3 +1,57 @@
 .margin {
   padding-top: 20px;
 }
+
+#loader {
+  margin-top: 100px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  // .card {
+  //   width: max-content;
+  // }
+}
+
+@media only screen and (max-width: 600px) {
+  .cards {
+    display: flex;
+    flex-flow: column;
+    padding-right: 15px;
+
+    margin: 0;
+
+    .card {
+      width: 100%;
+
+      .description {
+        color: #bbb;
+      }
+
+      .header {
+        color: #29c7ac;
+      }
+      .meta a {
+        color: #00818a;
+      }
+
+      .extra.content .icon:hover {
+        color: #ed6363;
+      }
+
+      .extra.content .icon,
+      .extra.content span {
+        color: #bbb;
+      }
+    }
+  }
+
+  .ui.cards a.card,
+  .ui.link.card,
+  .ui.link.cards .card,
+  a.ui.card {
+    background: #1a1a2e;
+    color: #fff;
+  }
+}
