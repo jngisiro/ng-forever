@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/services/product';
 import { ProductService } from 'src/app/services/product.service';
 import categories from '../../services/categories';
@@ -16,7 +17,7 @@ export class ProductsComponent implements OnInit {
   categories = categories;
   loading = false;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
     this.loading = true;
@@ -33,5 +34,9 @@ export class ProductsComponent implements OnInit {
         this.loading = false;
       }
     );
+  }
+
+  onClick(id: string) {
+    this.router.navigate(['product', id]);
   }
 }
