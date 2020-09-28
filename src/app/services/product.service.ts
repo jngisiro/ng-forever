@@ -27,10 +27,12 @@ export class ProductService {
   }
 
   getProduct(id) {
-    return this.http.get(
-      'https://forever-products.herokuapp.com/api/v1/products/' + id,
-      { responseType: 'json' }
-    );
+    return this.http
+      .get<{ data: { product: Product } }>(
+        'https://forever-products.herokuapp.com/api/v1/products/' + id,
+        { responseType: 'json' }
+      )
+      .pipe(pluck('data', 'product'));
   }
 
   getProductsByCategory(_category: string) {

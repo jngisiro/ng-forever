@@ -9,7 +9,11 @@
 <ng-container *ngIf="!loading">
   <h3 class="ui header margin">Most Popular Products</h3>
   <div class="ui link cards">
-    <div *ngFor="let product of popularProducts" class="card">
+    <div
+      *ngFor="let product of popularProducts"
+      class="card"
+      (click)="onClick(product.id)"
+    >
       <div class="image">
         <img [src]="product.imageThumb" />
       </div>
@@ -38,7 +42,11 @@
 
   <h3 class="ui header margin">Our Newest Products</h3>
   <div class="ui link cards">
-    <div *ngFor="let product of newProducts" class="card">
+    <div
+      *ngFor="let product of newProducts"
+      class="card"
+      (click)="onClick(product.id)"
+    >
       <div class="image">
         <img [src]="product.imageThumb" />
       </div>
@@ -67,7 +75,11 @@
 
   <h3 class="ui header margin">Top rated Products</h3>
   <div class="ui link cards">
-    <div *ngFor="let product of topRatedProducts" class="card">
+    <div
+      *ngFor="let product of topRatedProducts"
+      class="card"
+      (click)="onClick(product.id)"
+    >
       <div class="image">
         <img [src]="product.imageThumb" />
       </div>
