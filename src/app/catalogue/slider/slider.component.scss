@@ -77,9 +77,16 @@
   height: 0;
   left: 10%;
   position: absolute;
-  top: calc(50% - 5px);
+  top: calc(45% - 5px);
   width: 80%;
   z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .slider-arrows {
+    width: 95%;
+    left: 2.5%;
+  }
 }
 
 .slider-arrow {

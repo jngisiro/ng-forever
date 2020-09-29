@@ -20,8 +20,8 @@
   <p [innerHTML]="product.description"></p>
 
   <br />
-  <div *ngIf="product.contents" class="benefits">
-    <h3 class="ui header">Benfits of {{ product.name }}</h3>
+  <div *ngIf="product.benefits" class="benefits">
+    <h3 class="ui header">Benefits of {{ product.name }}</h3>
 
     <div class="ui list">
       <div class="item" *ngFor="let benefit of product.benefits">
@@ -64,7 +64,10 @@
   </div>
 
   <br /><br />
-  <div *ngIf="product.ingredients" class="benefits">
+  <div
+    *ngIf="product.ingredients && product.ingredients.length > 0"
+    class="benefits"
+  >
     <h3 class="ui header">Ingredients of {{ product.name }}</h3>
 
     <div class="ui horizontal bulleted list">
