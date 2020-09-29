@@ -32,7 +32,7 @@ export class SliderComponent implements OnInit {
     },
     {
       title: 'Weight Management',
-      subtitle: 'Lose weight with this fat burning weapon',
+      subtitle: 'Gives you the tools you need to start transforming your body',
       image: 'assets/images/weight.jpg',
     },
     {

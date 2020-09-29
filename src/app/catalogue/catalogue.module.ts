@@ -7,6 +7,8 @@ import { SliderComponent } from './slider/slider.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriesComponent } from './categories/categories.component';
+import { AllProductsComponent } from './all-products/all-products.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     SliderComponent,
     ProductsComponent,
     ProductComponent,
+    CategoriesComponent,
+    AllProductsComponent,
   ],
   imports: [CommonModule, CatalogueRoutingModule, HttpClientModule],
 })
