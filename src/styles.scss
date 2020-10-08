@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import "semantic-ui-css/semantic.min.css";
+
+$background: #1a1a2e;
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: $background;
+    color: #fff;
+  }
+
+  .ui {
+    .header {
+      color: #e94560;
+    }
+
+    .card {
+      background-color: $background;
+
+      .content {
+        background-color: $background;
+      }
+    }
+
+    .cards {
+      background-color: $background;
+    }
+
+    &.menu {
+      background-color: #16213e;
+      .item {
+        color: #00818a;
+
+        &:hover {
+          color: #29c7ac;
+        }
+
+        &.active {
+          color: #29c7ac;
+        }
+      }
+    }
+  }
+}

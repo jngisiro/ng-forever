@@ -1,0 +1,108 @@
+<div *ngIf="loading" id="loader" class="ui segment">
+  <div class="ui active inverted dimmer">
+    <div class="ui large text loader">Loading</div>
+  </div>
+  <p></p>
+  <p></p>
+  <p></p>
+</div>
+<ng-container *ngIf="!loading">
+  <h3 class="ui header margin">Most Popular Products</h3>
+  <div class="ui link cards">
+    <div
+      *ngFor="let product of popularProducts"
+      class="card"
+      (click)="onClick(product.id)"
+    >
+      <div class="image">
+        <img [src]="product.imageThumb" />
+      </div>
+      <div class="content">
+        <div class="header">{{ product.name }}</div>
+        <div class="meta">
+          <a>{{ categories[product.category] }}</a>
+        </div>
+        <div class="description">
+          From complex daily vitamins to natural energy boosters and digestive
+          aides
+        </div>
+      </div>
+      <div class="extra content">
+        <span class="left floated like">
+          <i class="like icon"></i>
+          Like
+        </span>
+        <span class="right floated">
+          <i class="user icon"></i>
+          75 Likes
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="ui header margin">Our Newest Products</h3>
+  <div class="ui link cards">
+    <div
+      *ngFor="let product of newProducts"
+      class="card"
+      (click)="onClick(product.id)"
+    >
+      <div class="image">
+        <img [src]="product.imageThumb" />
+      </div>
+      <div class="content">
+        <div class="header">{{ product.name }}</div>
+        <div class="meta">
+          <a>{{ categories[product.category] }}</a>
+        </div>
+        <div class="description">
+          From complex daily vitamins to natural energy boosters and digestive
+          aides
+        </div>
+      </div>
+      <div class="extra content">
+        <span class="left floated like">
+          <i class="like icon"></i>
+          Like
+        </span>
+        <span class="right floated">
+          <i class="user icon"></i>
+          75 Likes
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="ui header margin">Top rated Products</h3>
+  <div class="ui link cards">
+    <div
+      *ngFor="let product of topRatedProducts"
+      class="card"
+      (click)="onClick(product.id)"
+    >
+      <div class="image">
+        <img [src]="product.imageThumb" />
+      </div>
+      <div class="content">
+        <div class="header">{{ product.name }}</div>
+        <div class="meta">
+          <a>{{ categories[product.category] }}</a>
+        </div>
+        <div class="description">
+          From complex daily vitamins to natural energy boosters and digestive
+          aides
+        </div>
+      </div>
+      <div class="extra content">
+        <span class="left floated like">
+          <i class="like icon"></i>
+          Like
+        </span>
+        <span class="right floated">
+          <i class="user icon"></i>
+          75 Likes
+        </span>
+      </div>
+    </div>
+  </div>
+</ng-container>

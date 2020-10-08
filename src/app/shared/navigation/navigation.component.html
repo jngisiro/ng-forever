@@ -1,0 +1,42 @@
+<div class="ui top fixed menu">
+  <div class="item">
+    <!-- <img src="../../../favicon.ico" />  -->
+    <a routerLink="/" routerLinkActive="active">Forever Living Products</a>
+  </div>
+  <div class="right menu">
+    <a routerLink="about" routerLinkActive="active" class="item"
+      >About Forever Products</a
+    >
+    <a routerLink="testimonials" routerLinkActive="active" class="item"
+      >Testimonials</a
+    >
+    <a routerLink="sigin" routerLinkActive="active" class="item">Sign-in</a>
+  </div>
+</div>
+
+<div class="margin">
+  <div class="ui menu">
+    <a
+      class="item"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Catalogue
+    </a>
+    <a class="item" routerLink="all-products" routerLinkActive="active"
+      >All Products
+    </a>
+    <a class="item" routerLink="categories" routerLinkActive="active">
+      Categories
+    </a>
+    <div class="right menu">
+      <div class="item">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Search..." />
+          <i class="search link icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<div *ngIf="loading" class="margin">
+  <div class="ui icon message">
+    <i class="notched circle loading icon"></i>
+    <div class="content">
+      <div class="header">Just one second</div>
+      <p>We're fetching that content for you.</p>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="!loading">
+  <div id="banner" class="ui fluid image" [style]="getStyle()">
+    <div class="ui black ribbon label">
+      <i class="hotel icon"></i> {{ product.name }}
+    </div>
+  </div>
+
+  <h1 class="ui header">{{ product.name }}</h1>
+
+  <p [innerHTML]="product.description"></p>
+
+  <br />
+  <div *ngIf="product.benefits" class="benefits">
+    <h3 class="ui header">Benefits of {{ product.name }}</h3>
+
+    <div class="ui list">
+      <div class="item" *ngFor="let benefit of product.benefits">
+        <i class="child icon"></i>
+        <div class="content">
+          {{ benefit }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <br />
+  <div *ngIf="product.contents" class="benefits">
+    <h3 class="ui header">Contents</h3>
+
+    <div class="ui list">
+      <div class="item" *ngFor="let item of product.contents">
+        <i class="medkit icon"></i>
+        <div class="content">
+          {{ item }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br /><br />
+  <div *ngIf="product.directions" class="benefits">
+    <h3 class="ui header">Usage Instructions</h3>
+
+    <div class="ui list">
+      <div class="item">
+        <i class="user md icon"></i>
+        <div class="content">
+          {{ product.directions }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br /><br />
+  <div
+    *ngIf="product.ingredients && product.ingredients.length > 0"
+    class="benefits"
+  >
+    <h3 class="ui header">Ingredients of {{ product.name }}</h3>
+
+    <div class="ui horizontal bulleted list">
+      <div class="item" *ngFor="let item of product.ingredients">
+        <div class="content">
+          {{ item }}
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<br /><br />
+
+<!-- <div class="ui raised segment">
+  <a class="ui red ribbon label">Overview</a>
+  <span>Account Details</span>
+  <p></p>
+  <a class="ui blue ribbon label">Community</a> User Reviews
+  <p></p>
+</div> -->

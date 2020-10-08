@@ -1,0 +1,51 @@
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
+    url(../../../assets/background.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .header {
+    text-align: center;
+    padding: 100px 0;
+    color: #ddd;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ui.small.image {
+    width: 100%;
+  }
+
+  .items {
+    padding: 0 40px;
+  }
+
+  .item .content .description {
+    color: #bbb;
+    text-align: center;
+    padding: 0 40px;
+  }
+
+  .item .content .header {
+    color: #e94560;
+    text-align: center;
+  }
+
+  .ui.items > .item > .image {
+    // min-width: 100% !important;
+    width: 100%;
+    // max-height: auto;
+  }
+
+  .ui.items > .item > .content > .header {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ui.items:not(.unstackable) > .item > .image + .content {
+    display: block;
+    padding: 1.5em 0 0;
+  }
+}

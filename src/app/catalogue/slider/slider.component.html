@@ -1,0 +1,40 @@
+<div class="slideshow">
+  <div class="slider-slides">
+    <div
+      class="slider-image"
+      [ngStyle]="{
+        'background-image':
+          'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' +
+          banners[currentIndex].image +
+          ')'
+      }"
+    >
+      <div class="description">
+        <h1 class="ui header">{{ banners[currentIndex].title }}</h1>
+        <h3 class="ui header">{{ banners[currentIndex].subtitle }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-arrows">
+    <div
+      class="slider-arrow slider-arrow--left"
+      (click)="moveSlide('prev')"
+    ></div>
+    <div
+      class="slider-arrow slider-arrow--right"
+      (click)="moveSlide('next')"
+    ></div>
+  </div>
+
+  <div class="slider-nav">
+    <button
+      *ngFor="let image of banners; let i = index"
+      [class]="
+        currentIndex === i
+          ? 'slider-navButton slider-navButton--active'
+          : 'slider-navButton'
+      "
+    ></button>
+  </div>
+</div>
