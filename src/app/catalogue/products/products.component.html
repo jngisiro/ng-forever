@@ -19,11 +19,16 @@
       </div>
       <div class="content">
         <div class="header">{{ product.name }}</div>
+        <br>
         <div class="meta">
-          <a>{{ categories[product.category] }}</a>
+          <a class="ui grey label">{{ categories[product.category] }}</a>
         </div>
         <div class="description">
           {{ product.summary | summarize }}
+        </div>
+        <br>
+        <div class="meta">
+          <a class="ui tag label">{{ product.price | currency: 'UGX ' }}</a>
         </div>
       </div>
       <div class="extra content">
@@ -51,11 +56,16 @@
       </div>
       <div class="content">
         <div class="header">{{ product.name }}</div>
+        <br>
         <div class="meta">
-          <a>{{ categories[product.category] }}</a>
+          <a class="ui grey label">{{ categories[product.category] }}</a>
         </div>
         <div class="description">
           {{ product.summary | summarize }}
+        </div>
+        <br>
+        <div class="meta">
+          <a class="ui tag label">{{ product.price | currency: 'UGX ' }}</a>
         </div>
       </div>
       <div class="extra content">
@@ -83,11 +93,16 @@
       </div>
       <div class="content">
         <div class="header">{{ product.name }}</div>
+        <br>
         <div class="meta">
-          <a>{{ categories[product.category] }}</a>
+          <a class="ui grey label">{{ categories[product.category] }}</a>
         </div>
         <div class="description">
           {{ product.summary | summarize }}
+        </div>
+        <br>
+        <div class="meta">
+          <a class="ui tag label">{{ product.price | currency: 'UGX ' }}</a>
         </div>
       </div>
       <div class="extra content">
