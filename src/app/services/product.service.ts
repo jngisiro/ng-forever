@@ -75,9 +75,7 @@ export class ProductService {
 
   getCategories() {
     return this.http
-      .get('https:/forever-products.herokuapp.com/api/v1/categories', {
-        responseType: 'json',
-      })
+      .get('https:/forever-products.herokuapp.com/api/v1/categories')
       .pipe(pluck('data', 'categories'));
   }
 }
