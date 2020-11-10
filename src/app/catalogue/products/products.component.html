@@ -19,22 +19,26 @@
       </div>
       <div class="content">
         <div class="header">{{ product.name }}</div>
+        <br>
         <div class="meta">
-          <a>{{ categories[product.category] }}</a>
+          <a class="ui grey label">{{ categories[product.category] }}</a>
         </div>
         <div class="description">
-          From complex daily vitamins to natural energy boosters and digestive
-          aides
+          {{ product.summary | summarize }}
         </div>
+        <br>
+        <!-- <div class="meta">
+          <a class="ui tag label">{{ product.price | currency: 'UGX ' }}</a>
+        </div> -->
       </div>
       <div class="extra content">
         <span class="left floated like">
-          <i class="like icon"></i>
-          Like
+          <i class="hand point right outline icon"></i>
+          Read More
         </span>
         <span class="right floated">
           <i class="user icon"></i>
-          75 Likes
+          {{ product.views }} Active
         </span>
       </div>
     </div>
@@ -52,22 +56,26 @@
       </div>
       <div class="content">
         <div class="header">{{ product.name }}</div>
+        <br>
         <div class="meta">
-          <a>{{ categories[product.category] }}</a>
+          <a class="ui grey label">{{ categories[product.category] }}</a>
         </div>
         <div class="description">
-          From complex daily vitamins to natural energy boosters and digestive
-          aides
+          {{ product.summary | summarize }}
         </div>
+        <br>
+        <!-- <div class="meta">
+          <a class="ui tag label">{{ product.price | currency: 'UGX ' }}</a>
+        </div> -->
       </div>
       <div class="extra content">
         <span class="left floated like">
-          <i class="like icon"></i>
-          Like
+          <i class="hand point right outline icon"></i>
+          Read More
         </span>
         <span class="right floated">
           <i class="user icon"></i>
-          75 Likes
+          {{ product.views }} Active
         </span>
       </div>
     </div>
@@ -85,22 +93,26 @@
       </div>
       <div class="content">
         <div class="header">{{ product.name }}</div>
+        <br>
         <div class="meta">
-          <a>{{ categories[product.category] }}</a>
+          <a class="ui grey label">{{ categories[product.category] }}</a>
         </div>
         <div class="description">
-          From complex daily vitamins to natural energy boosters and digestive
-          aides
+          {{ product.summary | summarize }}
         </div>
+        <br>
+        <!-- <div class="meta">
+          <a class="ui tag label">{{ product.price | currency: 'UGX ' }}</a>
+        </div> -->
       </div>
       <div class="extra content">
         <span class="left floated like">
-          <i class="like icon"></i>
-          Like
+          <i class="hand point right outline icon"></i>
+          Read More
         </span>
         <span class="right floated">
           <i class="user icon"></i>
-          75 Likes
+          {{ product.views }} Active
         </span>
       </div>
     </div>

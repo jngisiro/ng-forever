@@ -9,6 +9,7 @@ import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriesComponent } from './categories/categories.component';
 import { AllProductsComponent } from './all-products/all-products.component';
+import { SummarizePipe } from './summarize.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AllProductsComponent } from './all-products/all-products.component';
     ProductComponent,
     CategoriesComponent,
     AllProductsComponent,
+    SummarizePipe,
   ],
   imports: [CommonModule, CatalogueRoutingModule, HttpClientModule],
 })
